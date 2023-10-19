@@ -1,0 +1,26 @@
+{
+  "name": "verkefni6",
+  "version": "1.0.0",
+  "description": "firsta package",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"browser-sync start --server --files 'css/*.css, *.html'\" \"sass --watch styles/:css/\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch scss:css",
+    "serve": "browser-sync start --server --files 'css/*.css *.html'",
+    "start": "concurrently \"npm run sass\" \"npm run serve\"",
+    "lint": "stylelint 'styles/**/*.scss'"
+  },
+  "keywords": [
+    "package"
+  ],
+  "author": "Ragnar Thor",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "concurrently": "^8.2.2",
+    "sass": "^1.69.4",
+    "stylelint": "^15.11.0",
+    "stylelint-config-sass-guidelines": "^10.0.0"
+  }
+}
